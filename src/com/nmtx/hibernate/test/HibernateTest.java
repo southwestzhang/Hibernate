@@ -16,6 +16,8 @@ import com.nmtx.hibernate.utils.HibernateUtils;
  */
 public class HibernateTest {
 	
+	private String hello = "¿¥—Ωª•œ‡…À∫¶—Ω£°";
+	
 	@Test
 	public void baseTest() {
 		
@@ -36,6 +38,7 @@ public class HibernateTest {
 		session.close();
 		sessionFactory.close();
 	}
+	
 	
 	@Test
 	public void add() {
