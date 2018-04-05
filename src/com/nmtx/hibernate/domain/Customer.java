@@ -33,7 +33,7 @@ public class Customer {
 	private Set<LinkMan> linkMans = new HashSet<LinkMan>();
 	
 	private String showInfo;
-	
+	private String showMsg;
 	public long getCust_id() {
 		return cust_id;
 	}
