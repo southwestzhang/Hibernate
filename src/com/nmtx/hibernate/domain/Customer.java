@@ -6,16 +6,16 @@ import java.util.Set;
 public class Customer {
 	/**
 	 * 	CREATE TABLE `cst_customer` (
-	  `cust_id` bigint(32) NOT NULL AUTO_INCREMENT COMMENT '客户编号(主键)',
-	  `cust_name` varchar(32) NOT NULL COMMENT '客户名称(公司名称)',
-	  `cust_user_id` bigint(32) DEFAULT NULL COMMENT '负责人id',
-	  `cust_create_id` bigint(32) DEFAULT NULL COMMENT '创建人id',
-	  `cust_source` varchar(32) DEFAULT NULL COMMENT '客户信息来源',
-	  `cust_industry` varchar(32) DEFAULT NULL COMMENT '客户所属行业',
-	  `cust_level` varchar(32) DEFAULT NULL COMMENT '客户级别',
-	  `cust_linkman` varchar(64) DEFAULT NULL COMMENT '联系人',
-	  `cust_phone` varchar(64) DEFAULT NULL COMMENT '固定电话',
-	  `cust_mobile` varchar(16) DEFAULT NULL COMMENT '移动电话',
+	  `cust_id` bigint(32) NOT NULL AUTO_INCREMENT COMMENT '瀹㈡埛缂栧彿(涓婚敭)',
+	  `cust_name` varchar(32) NOT NULL COMMENT '瀹㈡埛鍚嶇О(鍏徃鍚嶇О)',
+	  `cust_user_id` bigint(32) DEFAULT NULL COMMENT '璐熻矗浜篿d',
+	  `cust_create_id` bigint(32) DEFAULT NULL COMMENT '鍒涘缓浜篿d',
+	  `cust_source` varchar(32) DEFAULT NULL COMMENT '瀹㈡埛淇℃伅鏉ユ簮',
+	  `cust_industry` varchar(32) DEFAULT NULL COMMENT '瀹㈡埛鎵�灞炶涓�',
+	  `cust_level` varchar(32) DEFAULT NULL COMMENT '瀹㈡埛绾у埆',
+	  `cust_linkman` varchar(64) DEFAULT NULL COMMENT '鑱旂郴浜�',
+	  `cust_phone` varchar(64) DEFAULT NULL COMMENT '鍥哄畾鐢佃瘽',
+	  `cust_mobile` varchar(16) DEFAULT NULL COMMENT '绉诲姩鐢佃瘽',
 	  PRIMARY KEY (`cust_id`)
 	 */
 	
@@ -34,6 +34,13 @@ public class Customer {
 	
 	private String showInfo;
 	private String showMsg;
+	public String getShowInfo() {
+		return showInfo;
+	}
+	public void setShowInfo(String showInfo) {
+		this.showInfo = showInfo;
+	}
+
 	public long getCust_id() {
 		return cust_id;
 	}
