@@ -6,16 +6,16 @@ import java.util.Set;
 public class Customer {
 	/**
 	 * 	CREATE TABLE `cst_customer` (
-	  `cust_id` bigint(32) NOT NULL AUTO_INCREMENT COMMENT '¿Í»§±àºÅ(Ö÷¼ü)',
-	  `cust_name` varchar(32) NOT NULL COMMENT '¿Í»§Ãû³Æ(¹«Ë¾Ãû³Æ)',
-	  `cust_user_id` bigint(32) DEFAULT NULL COMMENT '¸ºÔğÈËid',
-	  `cust_create_id` bigint(32) DEFAULT NULL COMMENT '´´½¨ÈËid',
-	  `cust_source` varchar(32) DEFAULT NULL COMMENT '¿Í»§ĞÅÏ¢À´Ô´',
-	  `cust_industry` varchar(32) DEFAULT NULL COMMENT '¿Í»§ËùÊôĞĞÒµ',
-	  `cust_level` varchar(32) DEFAULT NULL COMMENT '¿Í»§¼¶±ğ',
-	  `cust_linkman` varchar(64) DEFAULT NULL COMMENT 'ÁªÏµÈË',
-	  `cust_phone` varchar(64) DEFAULT NULL COMMENT '¹Ì¶¨µç»°',
-	  `cust_mobile` varchar(16) DEFAULT NULL COMMENT 'ÒÆ¶¯µç»°',
+	  `cust_id` bigint(32) NOT NULL AUTO_INCREMENT COMMENT 'å®¢æˆ·ç¼–å·(ä¸»é”®)',
+	  `cust_name` varchar(32) NOT NULL COMMENT 'å®¢æˆ·åç§°(å…¬å¸åç§°)',
+	  `cust_user_id` bigint(32) DEFAULT NULL COMMENT 'è´Ÿè´£äººid',
+	  `cust_create_id` bigint(32) DEFAULT NULL COMMENT 'åˆ›å»ºäººid',
+	  `cust_source` varchar(32) DEFAULT NULL COMMENT 'å®¢æˆ·ä¿¡æ¯æ¥æº',
+	  `cust_industry` varchar(32) DEFAULT NULL COMMENT 'å®¢æˆ·æ‰€å±è¡Œä¸š',
+	  `cust_level` varchar(32) DEFAULT NULL COMMENT 'å®¢æˆ·çº§åˆ«',
+	  `cust_linkman` varchar(64) DEFAULT NULL COMMENT 'è”ç³»äºº',
+	  `cust_phone` varchar(64) DEFAULT NULL COMMENT 'å›ºå®šç”µè¯',
+	  `cust_mobile` varchar(16) DEFAULT NULL COMMENT 'ç§»åŠ¨ç”µè¯',
 	  PRIMARY KEY (`cust_id`)
 	 */
 	
@@ -32,6 +32,7 @@ public class Customer {
 	
 	private Set<LinkMan> linkMans = new HashSet<LinkMan>();
 	
+	private String showInfo;
 	
 	public long getCust_id() {
 		return cust_id;
