@@ -1,4 +1,4 @@
-package com.nmtx.hibernate.test;
+﻿package com.nmtx.hibernate.test;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -87,6 +87,7 @@ public class HibernateTest {
 		System.out.println("来约一炮");	
 	}
 	
+	private  String show;
 	
 	
 	
