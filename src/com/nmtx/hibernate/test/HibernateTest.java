@@ -10,7 +10,7 @@ import com.nmtx.hibernate.domain.Customer;
 import com.nmtx.hibernate.utils.HibernateUtils;
 
 /**
- * hibernate»ù±¾²Ù×÷
+ * hibernateåŸºæœ¬æ“ä½œ
  * @author nmtxzl
  *
  */
@@ -27,10 +27,10 @@ public class HibernateTest {
 	
 		Transaction tx = session.beginTransaction();
 		Customer customer = new Customer();
-		customer.setCust_name("ÊÀ½çÕş¸®");
+		customer.setCust_name("ä¸–ç•Œæ”¿åºœ");
 		customer.setCust_level("one");
 		
-		session.save(customer);//Ö´ĞĞ±£´æ
+		session.save(customer);//æ‰§è¡Œä¿å­˜
 		
 		tx.commit();
 		session.close();
@@ -43,7 +43,7 @@ public class HibernateTest {
 		Transaction transaction = session.beginTransaction();
 		
 		Customer cust = new Customer();
-		cust.setCust_name("Ìô»¨Ò»Âä");
+		cust.setCust_name("æŒ‘èŠ±ä¸€è½");
 		session.save(cust);
 		
 		transaction.commit();
@@ -65,12 +65,14 @@ public class HibernateTest {
 		Session session = HibernateUtils.openSession();
 		Transaction transaction = session.beginTransaction();
 		Customer customer = session.get(Customer.class, 2l);
-		customer.setCust_level("µÚ¶şÃÎ");
+		customer.setCust_level("ç¬¬äºŒæ¢¦");
 		session.update(customer);
 		transaction.commit();
 		session.close();
 	}
-	
+	/**
+	*æ·»åŠ æ³¨è§£
+	*/
 	@Test
 	public void query() {
 		Session session = HibernateUtils.openSession();
@@ -79,6 +81,10 @@ public class HibernateTest {
 		System.out.println(customer);
 		transaction.commit();
 		session.close();
+	}
+	
+	public void show(){
+		System.out.println("æ¥çº¦ä¸€ç‚®");	
 	}
 	
 	
